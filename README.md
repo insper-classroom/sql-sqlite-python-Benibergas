@@ -12,9 +12,12 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste todos os jogos disponíveis para a plataforma Xbox One. (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT name
+      FROM vgsales_pbi
+      WHERE platform = "XOne";  
      ```
    - **Resultado**
+      ![Alt text](image.png)
     
 
 
@@ -22,40 +25,40 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste todos os jogos do gênero "Ação" que foram lançados após 2010.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE genre = "Action" and year > '2010'      
      ```
    - **Resultado**
-    
+      ![Alt text](image-1.png)    
 
 
 3. **Jogos mais recentes**:
    - **Enunciado**: Liste os 5 jogos mais recentes lançados.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi ORDER by year DESC
      ```
    - **Resultado**
-    
+      ![Alt text](image-2.png)
 
 
 4. **Jogos mais antigos**:
    - **Enunciado**: Liste os 5 jogos mais antigos.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi ORDER by year ASC
      ```
    - **Resultado**
-    
+      ![Alt text](image-3.png)
 
 
 5. **Jogos de Aventura com mais vendas na América do Norte**:
    - **Enunciado**: Quais são os 3 jogos do gênero "Aventura" com as maiores vendas na América do Norte?  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE genre = "Action" ORDER by na_sales DESC
      ```
    - **Resultado**
-    
+      ![Alt text](image-4.png)
 
 
 	 
@@ -63,10 +66,10 @@ Iremos utilizar a plataforma https://sqliteonline.com/ para treinar comandos SQL
    - **Enunciado**: Liste todos os jogos dos gêneros "RPG" ou "Strategy" lançados após 2005.  (copie e cole o comando e as 5 primeiras linhas do resultado aqui)
    - **Query**:
      ```sql
-      
+      SELECT * FROM vgsales_pbi WHERE genre = "Role-Playing" OR genre = "Strategy" and year > '2005'
      ```
    - **Resultado**
-    
+      ![Alt text](image-5.png)
 
 
 
@@ -90,17 +93,23 @@ Insira 5 registros de estudantes na tabela. Inclua os seguintes estudantes fict�
 - Maria Oliveira, Química, Ano de Ingresso: 2022
  
 **Selecione e mostre todos os registros da tabela no console.**
+![Alt text](image-6.png)
 
 - Filtre e mostre os estudantes que ingressaram entre 2019 e 2020 (inclusive) e exiba no console. Use o comando WHERE para realizar essa filtragem.
 
+![Alt text](image-7.png)
 - Atualize o "Ano de Ingresso" de um estudante específico. Mostre por todos estudantes novamente.
 
+![Alt text](image-8.png)
 - Delete um registro da tabela usando o ID do estudante. Mostre por todos estudantes novamente.
 
+![Alt text](image-9.png)
 - Filtre e mostre os estudantes do Curso de Computação que ingressaram após 2019. Mostre o resultado.
 
+![Alt text](image-10.png)
 - Imagine que alguém errou nos registros de ingresso de todos os alunos do curso de Computação, crie uma query que altere todos os registros dos alunos de Computação, campo ingresso para 2018. Mostre por todos estudantes novamente.
 
+![Alt text](image-12.png)
 
 
 
